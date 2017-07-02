@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Andrew Bevelhymer</title>
+  <link rel="stylesheet" href="css/hacker.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://andrewbevelhymer.com">Andrew Bevelhymer</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Large(kind of) Projects<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://andrewbevelhymer.com/weathermeme">WeatherMeme</a></li>
+              <ul>
+                <li><a href="http://andrewbevelhymer.com/weathermeme/api_howto">API</a></li>
+              </ul>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Simple Projects <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://github.com/andrewbeav/Tic-Tac-Toe"></a></li>
+              <li><a href="https://andrewbeav.github.io/second_degree_equation_solver">Quadratic Equation Solver</a></li>
+              <li><a href="#">Square Escape (Simple Game)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1 class="page-header">WeatherMeme Api</h1>
+      <p class="lead">The API that relieves you on those days where you just want some dank weather related memes</p>
+    </div>
+
+    <h3>How To Use</h3>
+    <p>Using this API is simple, first you need to head over to <a href="https://openweathermap.org"> Open Weather Map</a>
+    and get an API key <em>for their API</em>.</p>
+    <hr>
+    <p>Once you do that, you will include it as a query to the request for this API. The structure for making a request to this API is:
+    <blockquote>http://andrewbevelhymer.com/weathermeme/api/?owm_appid=your_open_weathermap_api_key&lat=latitude&lon=longitude</blockquote></p>
+
+    <hr>
+
+    <h3>The Object</h3>
+    <p>This request, if everything is valid, will return a JSON that contains three things</p>
+    <div class="list-group">
+      <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">meme_code</h4>
+        <p class="list-group-item-text">This is the same as the file name of the meme without the .png extension. Might be useful</p>
+      </a>
+      <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">meme_location</h4>
+        <p class="list-group-item-text">Location of the meme. You can use this to get the meme (via HTTP) in your application</p>
+      </a>
+      <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">weather_info</h4>
+        <p class="list-group-item-text">This is just the object that is given from Open Weather Map. It contains all the weather info for that particular location. Check their documentation for details.</p>
+      </a>
+    </div>
+
+    <hr>
+
+    <h3>Resources</h3>
+    <p><a href="http://openweathermap.org/current">Openweathermap Documentation.</a> Use this to learn how to use the <code>weather_info</code> object.</p>
+  </div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
