@@ -2,8 +2,11 @@ const owm_appid = '5f0dabe0a94eb1d907d7a79ff7562b93';
 
 $(function() {
   $('#memeGenBtn').on('click', function() {
-    navigator.geolocation.getCurrentPosition(updateMeme, function() {
+    navigator.geolocation.getCurrentPosition(updateMeme, function(err) {
       console.log("Error getting location");
+    },
+    {
+      enableHighAccuracy: true
     });
   })
 });
