@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Andrew Bevelhymer</title>
   <link rel="stylesheet" href="css/hacker.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -85,10 +86,22 @@
 
     <hr>
 
+    <h1 id="locationLabel">Location</h2>
     <div class="jumbotron text-center">
-        <img id="meme"src="placeholder_image.jpg" alt="Meme">
-        <h2 id="locationLabel">Location</h2>
-        <button id="memeGenBtn" class="btn btn-primary">Generate Meme</button>
+	<div class="row">
+		<div class="col-md-6">
+			<img id="meme"src="placeholder_image.jpg" alt="Meme">
+		</div>
+		<div class="col-md-6">
+			<section id="weatherInfo">
+				<h3 id="weatherDescriptionLabel">Hot, Cold, idk yet</h3>
+				<h3 id="tmpLabel">10000 &#176;F</h3>
+				<h3 id="windLabel">Windy, no wind? Need your location to find out!</h3>
+				<h3 id="humidityLabel">Humidity: Grande</h3>
+			</section>
+			<button id="memeGenBtn" class="btn btn-lg btn-primary">Generate Meme</button>
+		</div>	
+	</div>
     </div>
 
   </div>
