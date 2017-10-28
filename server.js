@@ -16,11 +16,13 @@ app.use(require('helmet')());
 
 app.use('/weathermeme', require('./routes/weathermeme'));
 
+/*
 const options = {
   cert: fs.readFileSync('./sslcert/fullchain.pem'),
   key: fs.readFileSync('./sslcert/privKey.pem')
 };
+*/
 
 app.listen(3000);
-https.createServer(options, app).listen(8443);
+//https.createServer(options, app).listen(8443);
 console.log('Listening on port 3000');
